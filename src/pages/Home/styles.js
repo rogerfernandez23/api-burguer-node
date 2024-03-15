@@ -12,7 +12,7 @@ export const ContainerItens = styled.div`
 `;
 
 export const Image = styled.img`
-    width: 260px;
+    width: 180px;
 `;
 
 export const H1 = styled.h1`
@@ -50,9 +50,9 @@ export const Input = styled.input`
 export const Button = styled.button`
     background-color: #D93856;
     color: white;
-    width: 300px;
-    height: 70px;
-    margin-top: 50px;
+    width: 250px;
+    height: 40px;
+    margin-top: 30px;
     border: none;
     outline: none;
     cursor: pointer;
@@ -63,8 +63,8 @@ export const Button = styled.button`
 export const ButtonRequest = styled.button`
     background-color: green;
     color: white;
-    width: 300px;
-    height: 70px;
+    width: 250px;
+    height: 40px;
     margin-top: 20px;
     border: none;
     outline: none;

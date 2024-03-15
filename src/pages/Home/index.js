@@ -41,7 +41,7 @@ const Base = () => {
           {
             order: inputRequest.current.value,
             name: inputName.current.value,
-            price: `R$: ${Math.floor(Math.random() * (+ 1) + 13)}`,
+            price: `R$: ${Math.floor(Math.random() * (+ 1) * 10)}`,
             status: statusReq
           });
           setRequests([...requests, newRequest]);
@@ -70,7 +70,6 @@ const Base = () => {
             </ContainerItens>
 
             <Button onClick={addNewRequest}>Cadastrar Pedido</Button>
-
             <ButtonRequest onClick={navigate}>Todos os Pedidos</ButtonRequest>
         </Container>
     )

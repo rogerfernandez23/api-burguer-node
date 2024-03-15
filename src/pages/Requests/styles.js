@@ -13,7 +13,7 @@ export const ContainerItens = styled.div`
 `;
 
 export const Image = styled.img`
-    width: 240px;
+    width: 180px;
 `;
 
 export const H1 = styled.h1`
@@ -31,7 +31,7 @@ export const Button = styled.button`
     background-color: gray;
     color: white;
     width: 300px;
-    height: 70px;
+    height: 50px;
     margin-top: 50px;
     margin-bottom: 25px;
     border: none;
