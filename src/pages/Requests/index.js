@@ -21,7 +21,7 @@ const Req = () => {
     const history = useHistory();
     const [ requests, setRequests] = useState([]);
 
-    const baseUrl = 'https://backend-api-burguer.vercel.app/';
+    const baseUrl = 'https://api-burguer-iota.vercel.app/';
 
     useEffect(() => {
 
@@ -69,7 +69,7 @@ const Req = () => {
 
         Swal.fire({
             icon: 'success',
-            title: 'Usuário Deletado com Sucesso',
+            title: 'Pedido Deletado com Sucesso',
             color: 'black',
             showConfirmButton: false,
             timer: 2500

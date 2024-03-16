@@ -23,7 +23,7 @@ const Base = () => {
     const inputName = useRef();
     const statusReq = 'Em Preparação';
 
-    const baseUrl = 'https://backend-api-burguer.vercel.app/';
+    const baseUrl = 'https://api-burguer-iota.vercel.app/';
 
     async function addNewRequest() {
         if(inputRequest.current.value === "" || inputName.current.value === ""){
