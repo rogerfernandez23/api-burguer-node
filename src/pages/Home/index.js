@@ -23,6 +23,8 @@ const Base = () => {
     const inputName = useRef();
     const statusReq = 'Em Preparação';
 
+    const baseUrl = 'https://backend-api-burguer.vercel.app/';
+
     async function addNewRequest() {
         if(inputRequest.current.value === "" || inputName.current.value === ""){
             Swal.fire({
@@ -37,7 +39,7 @@ const Base = () => {
             })
         } else {  
     
-          const {data: newRequest} = await axios.post('http://localhost:3001/storage/order', 
+          const {data: newRequest} = await axios.post(`${baseUrl}storage/order`, 
           {
             order: inputRequest.current.value,
             name: inputName.current.value,

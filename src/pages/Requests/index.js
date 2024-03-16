@@ -21,10 +21,12 @@ const Req = () => {
     const history = useHistory();
     const [ requests, setRequests] = useState([]);
 
+    const baseUrl = 'https://backend-api-burguer.vercel.app/';
+
     useEffect(() => {
 
         async function updateOrders() {
-            const { data: requestsGet } = await axios.get('http://localhost:3001/storage/order')
+            const { data: requestsGet } = await axios.get(`${baseUrl}storage/order`)
             setRequests(requestsGet);
         }
 
@@ -32,9 +34,9 @@ const Req = () => {
     }, []);
 
     async function refreshRequest(userId) {
-        await axios.patch(`http://localhost:3001/storage/order/${userId}`)
+        await axios.patch(`${baseUrl}storage/order/storage/order/${userId}`)
 
-        const { data: newStatus } = await axios.get('http://localhost:3001/storage/order')
+        const { data: newStatus } = await axios.get(`${baseUrl}storage/order`)
         setRequests(newStatus);
     }
 
@@ -61,7 +63,7 @@ const Req = () => {
 
     async function deleteRequest(userId) {
 
-        await axios.delete(`http://localhost:3001/storage/order/${userId}`); 
+        await axios.delete(`${baseUrl}storage/order/${userId}`); 
         const newRequests = requests.filter((user) => user.id !== userId);
         setRequests(newRequests);
 
