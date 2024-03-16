@@ -34,7 +34,7 @@ const Req = () => {
     }, []);
 
     async function refreshRequest(userId) {
-        await axios.patch(`${baseUrl}storage/order/storage/order/${userId}`)
+        await axios.patch(`${baseUrl}storage/order/${userId}`)
 
         const { data: newStatus } = await axios.get(`${baseUrl}storage/order`)
         setRequests(newStatus);
